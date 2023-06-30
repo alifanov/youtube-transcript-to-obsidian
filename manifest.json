@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Domain Checker",
+  "version": "1.0",
+  "description": "Checks the domain of loaded web pages",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "*://*.youtube.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ]
+    }
+  ]
+}
+
