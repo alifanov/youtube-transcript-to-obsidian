@@ -1,6 +1,14 @@
 # youtube-transcript-to-obsidian
 Firefox plugin to import all opening YouTube video to Obsidian vault with transcription
 
+**Important**: the plugin is active development, please keep in mind
+
+## Install
+
+## Configuration
+
+Upate constants.jsn for your settings
+
 ## Usage
 
 Open any YouTube video
