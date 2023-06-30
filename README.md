@@ -3,6 +3,12 @@ Firefox plugin to import all opening YouTube video to Obsidian vault with transc
 
 **Important**: the plugin is active development, please keep in mind
 
+## Requirements
+
+https://vinzent03.github.io/obsidian-advanced-uri/
+
+Current extension requires the Obsidian plugin for work
+
 ## Install
 
 ### Clone repo
