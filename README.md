@@ -7,11 +7,17 @@ Firefox plugin to import all opening YouTube video to Obsidian vault with transc
 
 ### Clone repo
 
-```git clone ```
+```git clone git@github.com:alifanov/youtube-transcript-to-obsidian.git```
 
-### Update settings.js
+### Update settings
 
-```edit settings.js```
+Open `content.js` and update settings
+
+|Settings| Description | Unit |Default      |
+|-|-------------------------------------------|-|-------------|
+|VAULT_NAME| Name of your vault in Obsidian|str|zettelkasten |
+|VIDEO_PATH_PREFIX| Prefix for your video folder if it exists|str | video/      |
+|START_TIMEOUT| Name of your vault in Obsidian|ms| 3000         |
 
 ### Add temporary Firefox extension
 
@@ -22,16 +28,6 @@ Click on `Load Temporary Add-On...`
 Choose `manifest.json` from cloned repo
 
 Click on `Reload` button for the extension
-
-## Configuration
-
-Update settings.js for your settings
-
-|Settings| Description                               | Default      |
-|-|-------------------------------------------|--------------|
-|VAULT_NAME| Name of your vault in Obsidian            | zettelkasten |
-|VIDEO_PATH_PREFIX| Prefix for your video folder if it exists | video/       |
-|START_TIMEOUT| Name of your vault in Obsidian            | 3000         |
 
 ## Usage
 

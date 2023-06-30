@@ -19,8 +19,7 @@
         "*://*.youtube.com/*"
       ],
       "js": [
-        "content.js",
-        "settings.js"
+        "content.js"
       ]
     }
   ]

@@ -1,4 +1,7 @@
-import {START_TIMEOUT, VAULT_NAME, VIDEO_PATH_PREFIX} from "./settings";
+const VAULT_NAME = 'zettelkasten';
+const VIDEO_PATH_PREFIX = 'video/';
+const START_TIMEOUT = 3000;
+
 
 let handler = function () {
     const currentURL = window.location.href;
