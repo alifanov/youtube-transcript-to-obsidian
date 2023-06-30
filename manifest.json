@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "youtube-transcript-to-obsidian",
-  "version": "1.0",
+  "version": "1.0.1",
   "description": "Checks the domain of loaded web pages",
   "permissions": [
     "tabs",
