@@ -1,17 +1,17 @@
-let handler = function () {
-    let currentDomain = window.location.hostname;
+import {START_TIMEOUT, VAULT_NAME, VIDEO_PATH_PREFIX} from "./settings";
 
+let handler = function () {
     const currentURL = window.location.href;
-    let pageTitle = document.title;
+    const pageTitle = document.title;
     if (currentURL.indexOf('watch') !== -1) {
-        let url = 'https://www.youtube.com/youtubei/v1/get_transcript?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
-        let headers = {
+        const url = 'https://www.youtube.com/youtubei/v1/get_transcript?key=AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8';
+        const headers = {
             'Content-Type': 'application/json'
         };
 
         const searchParams = new URLSearchParams(window.location.search);
 
-        let data = {
+        const data = {
             "context": {
                 "client": {
                     "clientName": "WEB",
@@ -32,7 +32,7 @@ let handler = function () {
                 const lines = transcripts.map((cue) => cue.transcriptCueGroupRenderer.cues[0].transcriptCueRenderer.cue.simpleText.replace(/[-]/g, '').replace('%', 'percent'));
                 browser.runtime.sendMessage({
                     action: 'openTab',
-                    url: 'obsidian://advanced-uri?vault=zettelkasten&filepath=video/' + encodeURIComponent(pageTitle.replace(/[\/:#-]/g, ' ')) + '&data=' + encodeURIComponent(window.location.href + ' ' + lines)
+                    url: 'obsidian://advanced-uri?vault=' + VAULT_NAME + '&filepath=' + VIDEO_PATH_PREFIX + encodeURIComponent(pageTitle.replace(/[\/:#-]/g, ' ')) + '&data=' + encodeURIComponent(window.location.href + ' ' + lines)
                 });
             })
             .catch((error) => {
@@ -41,4 +41,4 @@ let handler = function () {
     }
 };
 
-setTimeout(handler, 3000)
+setTimeout(handler, START_TIMEOUT)
